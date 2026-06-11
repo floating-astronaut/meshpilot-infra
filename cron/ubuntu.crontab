@@ -8,3 +8,4 @@
 0 */6 * * * /home/ubuntu/glitch-grow-ads-agent-private/scripts/sync_mirrors.sh ads >> /home/ubuntu/.local/state/glitch-ads-bot/logs/sync-mirrors.log 2>&1
 30 3 * * * /home/ubuntu/glitch-grow-ads-agent-private/scripts/sync_mirrors.sh full >> /home/ubuntu/.local/state/glitch-ads-bot/logs/sync-mirrors.log 2>&1
 0 3 * * * /home/ubuntu/backups/backup-postgres.sh
+47 3 * * * cd /home/ubuntu/meshpilot-infra && bash sync.sh >> /home/ubuntu/meshpilot-infra/sync.log 2>&1

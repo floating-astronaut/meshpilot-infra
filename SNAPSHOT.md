@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-06-11 21:41:29 UTC
-**Uptime:** up 2 days, 11 hours, 19 minutes
-**Load avg:** 0.23, 0.18, 0.28
+**Generated:** 2026-06-11 21:44:33 UTC
+**Uptime:** up 2 days, 11 hours, 22 minutes
+**Load avg:** 0.22, 0.17, 0.25
 
 ## Running services (ours)
 
@@ -42,9 +42,9 @@ mesh-pilot-docs-autosync.service  [inactive]
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS             PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up About an hour   127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 days          127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS       PORTS
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 2 hours   127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 days    127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -168,7 +168,7 @@ Swap:          4.0Gi       2.0Gi       2.0Gi
 /home/ubuntu/glitch-brain-mcp                  git: git@github.com:floating-astronaut/glitch-brain-mcp.git
 /home/ubuntu/glitch-grow-ads-agent-private     git: git@github.com:Nuraveda-Labs/meshpilot-digital-marketing-stack.git
 /home/ubuntu/hydrogen-d2c-starter              git: (no remote)
-/home/ubuntu/meshpilot-infra                   (not a git repo)
+/home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
 /srv/apps/cannabis-web-next                    git: git@github.com:glitch-exec-labs/glitch-budz.git
 
@@ -187,4 +187,5 @@ Swap:          4.0Gi       2.0Gi       2.0Gi
 0 */6 * * * /home/ubuntu/glitch-grow-ads-agent-private/scripts/sync_mirrors.sh ads >> /home/ubuntu/.local/state/glitch-ads-bot/logs/sync-mirrors.log 2>&1
 30 3 * * * /home/ubuntu/glitch-grow-ads-agent-private/scripts/sync_mirrors.sh full >> /home/ubuntu/.local/state/glitch-ads-bot/logs/sync-mirrors.log 2>&1
 0 3 * * * /home/ubuntu/backups/backup-postgres.sh
+47 3 * * * cd /home/ubuntu/meshpilot-infra && bash sync.sh >> /home/ubuntu/meshpilot-infra/sync.log 2>&1
 ```
