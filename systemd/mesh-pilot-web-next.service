@@ -1,0 +1,40 @@
+[Unit]
+Description=Mesh Pilot frontend — apps/web-next (Next.js 16) behind nginx
+After=docker.service network.target
+Requires=docker.service
+
+[Service]
+Type=simple
+# We don't use --rm because we want systemd to control the lifecycle
+# and `docker logs` to keep the previous run's tail across restarts.
+# Stale container from a crashed prior run is cleared by the
+# ExecStartPre rm; the |true makes a missing container a no-op.
+ExecStartPre=-/usr/bin/docker rm -f mesh-pilot-web-next
+ExecStart=/usr/bin/docker run \
+    --name mesh-pilot-web-next \
+    --env-file /home/ubuntu/glitch-grow-ads-agent-private/.env.web-next \
+    -p 127.0.0.1:3001:3000 \
+    --restart=no \
+    mesh-pilot-web-next:latest
+ExecStop=/usr/bin/docker stop -t 10 mesh-pilot-web-next
+Restart=on-failure
+RestartSec=10
+
+# Output goes to docker logs (not journald) because the container is
+# the long-running process; systemd just supervises the `docker run`.
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=mesh-pilot-web-next
+
+
+# Hardening 2026-06-07 (autopilot)
+# Docker launchers — full ProtectSystem=strict would block /usr/bin/docker.
+# Limited to safe-for-docker directives.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectKernelTunables=true
+RestrictNamespaces=false
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target

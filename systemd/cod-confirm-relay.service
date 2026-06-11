@@ -1,0 +1,29 @@
+[Unit]
+Description=COD Confirm — Twilio ConversationRelay backend (international concierge LLM brain)
+After=network.target
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/glitch-grow-ads-agent-private/apps/cod_confirm
+EnvironmentFile=/home/ubuntu/glitch-grow-ads-agent-private/.env
+Environment=PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/usr/bin/node src/relay-server.js
+Restart=on-failure
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=cod-confirm-relay
+
+# Hardening 2026-06-07 (autopilot)
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/glitch-grow-ads-agent-private
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+RestrictNamespaces=true
+LockPersonality=true
+MemoryMax=512M
+
+[Install]
+WantedBy=multi-user.target

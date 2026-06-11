@@ -1,0 +1,28 @@
+[Unit]
+Description=Multi-Store Theme Manager (Shopify App)
+After=network.target postgresql.service
+Requires=postgresql.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/multi-store-theme-manager
+EnvironmentFile=/home/ubuntu/multi-store-theme-manager/.env
+Environment=HOST=127.0.0.1
+ExecStart=/usr/bin/pnpm start
+Environment=PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=shopify-app
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/multi-store-theme-manager
+
+[Install]
+WantedBy=multi-user.target

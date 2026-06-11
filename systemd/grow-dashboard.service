@@ -1,0 +1,33 @@
+[Unit]
+Description=Mesh Pilot Dashboard (FastAPI) — unified Meta ads view
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/glitch-grow-ads-agent-private
+EnvironmentFile=/home/ubuntu/glitch-grow-ads-agent-private/.env.grow-dashboard
+ExecStart=/home/ubuntu/glitch-grow-ads-agent-private/.venv/bin/python -m meshpilot_dashboard.main
+Restart=on-failure
+RestartSec=5
+MemoryMax=512M
+LimitNOFILE=4096
+
+# Hardening 2026-06-07 (autopilot)
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/glitch-grow-ads-agent-private
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target

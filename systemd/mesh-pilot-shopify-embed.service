@@ -1,0 +1,33 @@
+[Unit]
+Description=Mesh Pilot — embedded Shopify app (Remix) self-hosted container
+After=docker.service postgresql@17-main.service
+Requires=docker.service
+
+[Service]
+User=ubuntu
+Group=ubuntu
+# Clean any stale container, then run attached so systemd tracks it.
+ExecStartPre=-/usr/bin/docker rm -f mesh-pilot-shopify-embed
+ExecStart=/usr/bin/docker run --rm --name mesh-pilot-shopify-embed \
+  --env-file /home/ubuntu/glitch-grow-ads-agent-private/src/seo_agent/.env \
+  --add-host=host.docker.internal:172.17.0.1 \
+  -p 127.0.0.1:3120:3000 \
+  mesh-pilot-shopify-embed:latest
+ExecStop=/usr/bin/docker stop mesh-pilot-shopify-embed
+Restart=always
+RestartSec=5
+TimeoutStartSec=120
+SyslogIdentifier=mesh-pilot-shopify-embed
+
+
+# Hardening 2026-06-07 (autopilot)
+# Docker launchers — full ProtectSystem=strict would block /usr/bin/docker.
+# Limited to safe-for-docker directives.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectKernelTunables=true
+RestrictNamespaces=false
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target

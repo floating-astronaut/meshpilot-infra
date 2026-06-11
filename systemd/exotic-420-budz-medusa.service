@@ -1,0 +1,17 @@
+[Unit]
+Description=Exotic 420 Budz Medusa backend
+After=network.target postgresql.service
+Requires=postgresql.service
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/srv/apps/cannabis-web-next/medusa
+ExecStart=/bin/bash -lc "set -a; source .env; set +a; export NODE_ENV=production; exec ./node_modules/.bin/medusa start -H 127.0.0.1 -p 9000"
+Restart=always
+RestartSec=5
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+
+[Install]
+WantedBy=multi-user.target

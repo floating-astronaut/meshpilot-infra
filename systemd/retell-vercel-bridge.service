@@ -1,0 +1,20 @@
+[Unit]
+Description=Retell ↔ Vercel AI Gateway WebSocket bridge
+After=network.target
+Documentation=https://docs.retellai.com/build/custom-llm
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/glitch-grow-ads-agent-private/ops/retell-vercel-bridge
+EnvironmentFile=/home/ubuntu/glitch-grow-ads-agent-private/.env
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node /home/ubuntu/glitch-grow-ads-agent-private/ops/retell-vercel-bridge/server.js
+Restart=on-failure
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=retell-vercel-bridge
+
+[Install]
+WantedBy=multi-user.target

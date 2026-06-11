@@ -1,0 +1,24 @@
+[Unit]
+Description=Glitch Brain MCP — central memory for Glitch Grow AI agents (streamable-HTTP on :3107)
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/glitch-brain-mcp
+EnvironmentFile=-/home/ubuntu/glitch-brain-mcp/.env
+ExecStart=/home/ubuntu/glitch-brain-mcp/.venv/bin/glitch-brain-mcp serve
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=false
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

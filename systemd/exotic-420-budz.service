@@ -1,0 +1,25 @@
+[Unit]
+Description=Exotic 420 Budz Next.js app
+After=network-online.target exotic-420-budz-medusa.service
+Wants=network-online.target
+Requires=exotic-420-budz-medusa.service
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/srv/apps/cannabis-web-next
+Environment=NODE_ENV=production
+Environment=PORT=3002
+Environment=HOSTNAME=127.0.0.1
+Environment=HOME=/srv/apps/cannabis-web-next
+Environment=NPM_CONFIG_CACHE=/srv/shared/cannabis-web-next/.npm-cache
+Environment=INQUIRY_STORAGE_DIR=/srv/shared/cannabis-web-next/inquiries
+ExecStart=/usr/bin/npm start -- --hostname 127.0.0.1 --port 3002
+Restart=always
+RestartSec=5
+TimeoutStopSec=20
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=Cloudflare Tunnel connector
+After=network-online.target nginx.service
+Wants=network-online.target
+Requires=nginx.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/cloudflared/cloudflared-token.env
+ExecStart=/usr/bin/cloudflared tunnel --no-autoupdate --loglevel info --logfile /var/log/cloudflared/cloudflared.log run --token ${TUNNEL_TOKEN}
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

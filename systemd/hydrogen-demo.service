@@ -1,0 +1,20 @@
+[Unit]
+Description=Hydrogen D2C Starter — public demo at hydrogen.nuraveda.com
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/hydrogen-d2c-starter
+Environment=NODE_ENV=production
+Environment=PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/bin/pnpm exec shopify hydrogen preview --port 3030
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
