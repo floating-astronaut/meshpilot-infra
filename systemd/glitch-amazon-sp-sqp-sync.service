@@ -1,0 +1,13 @@
+[Unit]
+Description=Mesh Pilot — Amazon SP Search Query Performance (weekly) → mirror.amazon_sp_sqp_weekly
+After=network-online.target postgresql.service
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/glitch-grow-ads-agent-private
+EnvironmentFile=/home/ubuntu/glitch-grow-ads-agent-private/.env.grow-dashboard
+# SQP is weekly data with a multi-day lag; --lag-weeks 2 + --max-asins 8
+# keeps within the createReport burst (15) for ayurpet's hero set.
+ExecStart=/home/ubuntu/glitch-grow-ads-agent-private/.venv/bin/python scripts/sync_amazon_sp_sqp.py --weeks 1 --max-asins 8 --lag-weeks 2
