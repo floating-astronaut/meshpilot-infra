@@ -1,0 +1,14 @@
+[Unit]
+Description=Mesh Pilot — AI influencer engagement sweep (sanctioned comment replies on own posts)
+After=network-online.target postgresql.service
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/glitch-grow-ads-agent-private/src/social_agent
+Environment=PYTHONPATH=/home/ubuntu/glitch-grow-ads-agent-private/src/social_agent/src:/home/ubuntu/glitch-grow-ads-agent-private/src
+EnvironmentFile=/home/ubuntu/glitch-grow-ads-agent-private/.env
+EnvironmentFile=/home/ubuntu/glitch-grow-ads-agent-private/.env.influencer-secrets
+SyslogIdentifier=mesh-pilot-influencer-engage
+ExecStart=/home/ubuntu/glitch-grow-ads-agent-private/.venv/bin/python scripts/influencer_worker.py --brand ayurpet --engage-only

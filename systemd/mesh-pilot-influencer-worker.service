@@ -1,0 +1,16 @@
+[Unit]
+Description=Mesh Pilot — AI influencer pipeline worker (generate + post sweep over core.influencer_post_plan)
+After=network-online.target postgresql.service
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/glitch-grow-ads-agent-private/src/social_agent
+Environment=PYTHONPATH=/home/ubuntu/glitch-grow-ads-agent-private/src/social_agent/src:/home/ubuntu/glitch-grow-ads-agent-private/src
+EnvironmentFile=/home/ubuntu/glitch-grow-ads-agent-private/.env
+# Adds MESH_PILOT_SECRETS_KEY_RING (the dashboard's key) so the worker can
+# decrypt Meta tokens that were encrypted with the dashboard secrets key.
+EnvironmentFile=/home/ubuntu/glitch-grow-ads-agent-private/.env.influencer-secrets
+SyslogIdentifier=mesh-pilot-influencer-worker
+ExecStart=/home/ubuntu/glitch-grow-ads-agent-private/.venv/bin/python scripts/influencer_worker.py --brand ayurpet --engage
