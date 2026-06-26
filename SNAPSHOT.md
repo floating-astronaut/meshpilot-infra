@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-06-25 03:47:01 UTC
-**Uptime:** up 2 weeks, 1 day, 17 hours, 24 minutes
-**Load avg:** 1.17, 1.22, 1.38
+**Generated:** 2026-06-26 03:47:01 UTC
+**Uptime:** up 2 weeks, 2 days, 17 hours, 24 minutes
+**Load avg:** 1.05, 1.03, 1.07
 
 ## Running services (ours)
 
@@ -31,7 +31,7 @@ Hand-maintained notes live in [README.md](README.md).
 
 ```
 glitch-amazon-sp-sqp-sync.service  [inactive]
-mesh-pilot-docs-autosync.service  [failed]
+mesh-pilot-docs-autosync.service  [inactive]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
@@ -40,14 +40,14 @@ mesh-pilot-influencer-worker.service  [inactive]
 ## Failed services
 
 ```
-● mesh-pilot-docs-autosync.service loaded failed failed Mesh Pilot — keep docs/ aligned with commit history (daily catch-up)
+(none)
 ```
 
 ## Docker containers
 
 ```
 NAMES                      IMAGE                             STATUS       PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 12 days   127.0.0.1:3001->3000/tcp
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 13 days   127.0.0.1:3001->3000/tcp
 mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 weeks   127.0.0.1:3120->3000/tcp
 ```
 
@@ -113,19 +113,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 67 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 66 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 53 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 52 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 61 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 60 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 72 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 71 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 60 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 59 days)
 ```
 
 ## Postgres databases
@@ -136,22 +136,22 @@ glitch_brain  (106 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (181 MB)
+shopify_app  (185 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        48G   38G  9.8G  80% /
+/dev/root        48G   39G  9.3G  81% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        10Gi       328Mi       878Mi       5.3Gi       4.4Gi
-Swap:          4.0Gi       2.0Gi       2.0Gi
+Mem:            15Gi        11Gi       205Mi       654Mi       5.0Gi       4.2Gi
+Swap:          4.0Gi       2.4Gi       1.6Gi
 ```
 
 ## Project directories
