@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-06-26 03:47:01 UTC
-**Uptime:** up 2 weeks, 2 days, 17 hours, 24 minutes
-**Load avg:** 1.05, 1.03, 1.07
+**Generated:** 2026-06-27 03:47:01 UTC
+**Uptime:** up 2 weeks, 3 days, 17 hours, 24 minutes
+**Load avg:** 0.10, 0.04, 0.24
 
 ## Running services (ours)
 
@@ -20,6 +20,7 @@ Hand-maintained notes live in [README.md](README.md).
   glitch-signal.service                          loaded active running Glitch Signal — monorepo social media agent
   grow-dashboard.service                         loaded active running Mesh Pilot Dashboard (FastAPI) — unified Meta ads view
   hydrogen-demo.service                          loaded active running Hydrogen D2C Starter — public demo at hydrogen.nuraveda.com
+  mesh-pilot-litellm-proxy.service               loaded active running Mesh Pilot - OpenAI-compatible Bedrock shim (port 4000) for the Retell voice bridge
   mesh-pilot-mcp.service                         loaded active running Mesh Pilot public MCP server (free-tier funnel) — MCP-FUNNEL-4
   mesh-pilot-shopify-embed.service               loaded active running Mesh Pilot — embedded Shopify app (Remix) self-hosted container
   mesh-pilot-web-next.service                    loaded active running Mesh Pilot frontend — apps/web-next (Next.js 16) behind nginx
@@ -47,7 +48,7 @@ mesh-pilot-influencer-worker.service  [inactive]
 
 ```
 NAMES                      IMAGE                             STATUS       PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 13 days   127.0.0.1:3001->3000/tcp
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 2 weeks   127.0.0.1:3001->3000/tcp
 mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 weeks   127.0.0.1:3120->3000/tcp
 ```
 
@@ -74,6 +75,7 @@ mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 weeks   127.0.
 127.0.0.1:3113               proc=python
 127.0.0.1:3120               proc=docker-proxy
 127.0.0.1:33667              proc=workerd
+127.0.0.1:4000               proc=python
 127.0.0.1:41887              proc=node
 127.0.0.1:4317               proc=otel-plugin
 127.0.0.1:5432               proc=postgres
@@ -113,19 +115,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 66 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 65 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 52 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 51 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 60 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 59 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 71 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 70 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 59 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 58 days)
 ```
 
 ## Postgres databases
@@ -136,22 +138,22 @@ glitch_brain  (106 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (185 MB)
+shopify_app  (189 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        48G   39G  9.3G  81% /
+/dev/root        48G   39G  8.6G  82% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        11Gi       205Mi       654Mi       5.0Gi       4.2Gi
-Swap:          4.0Gi       2.4Gi       1.6Gi
+Mem:            15Gi       6.4Gi       5.1Gi       707Mi       4.9Gi       9.0Gi
+Swap:          4.0Gi       2.5Gi       1.5Gi
 ```
 
 ## Project directories
@@ -192,4 +194,5 @@ Swap:          4.0Gi       2.4Gi       1.6Gi
 30 3 * * * /home/ubuntu/glitch-grow-ads-agent-private/scripts/sync_mirrors.sh full >> /home/ubuntu/.local/state/glitch-ads-bot/logs/sync-mirrors.log 2>&1
 0 3 * * * /home/ubuntu/backups/backup-postgres.sh
 47 3 * * * cd /home/ubuntu/meshpilot-infra && bash sync.sh >> /home/ubuntu/meshpilot-infra/sync.log 2>&1
+*/2 * * * * /home/ubuntu/ge-trade-watch.sh >> /home/ubuntu/.ge-trade-watch.cron.log 2>&1
 ```
