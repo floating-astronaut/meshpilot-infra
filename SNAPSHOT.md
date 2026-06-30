@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-06-29 03:47:01 UTC
-**Uptime:** up 2 weeks, 5 days, 17 hours, 24 minutes
-**Load avg:** 0.08, 0.09, 0.28
+**Generated:** 2026-06-30 03:47:01 UTC
+**Uptime:** up 2 weeks, 6 days, 17 hours, 24 minutes
+**Load avg:** 0.11, 0.68, 0.90
 
 ## Running services (ours)
 
@@ -32,7 +32,7 @@ Hand-maintained notes live in [README.md](README.md).
 
 ```
 glitch-amazon-sp-sqp-sync.service  [inactive]
-mesh-pilot-docs-autosync.service  [inactive]
+mesh-pilot-docs-autosync.service  [failed]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
@@ -41,7 +41,7 @@ mesh-pilot-influencer-worker.service  [inactive]
 ## Failed services
 
 ```
-(none)
+● mesh-pilot-docs-autosync.service loaded failed failed Mesh Pilot — keep docs/ aligned with commit history (daily catch-up)
 ```
 
 ## Docker containers
@@ -115,45 +115,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 63 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 62 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 49 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 48 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 57 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 56 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 68 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 67 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 56 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 55 days)
 ```
 
 ## Postgres databases
 
 ```
 exotic420budz_medusa  (18 MB)
-glitch_brain  (107 MB)
+glitch_brain  (108 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (196 MB)
+shopify_app  (199 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        48G   39G  8.6G  83% /
+/dev/root        48G   39G  8.5G  83% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       6.5Gi       4.2Gi       663Mi       5.6Gi       8.8Gi
-Swap:          4.0Gi       2.5Gi       1.5Gi
+Mem:            15Gi       6.2Gi       5.0Gi       901Mi       5.3Gi       9.1Gi
+Swap:          4.0Gi       2.2Gi       1.8Gi
 ```
 
 ## Project directories
