@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-06-30 03:47:01 UTC
-**Uptime:** up 2 weeks, 6 days, 17 hours, 24 minutes
-**Load avg:** 0.11, 0.68, 0.90
+**Generated:** 2026-07-01 03:47:01 UTC
+**Uptime:** up 3 weeks, 17 hours, 24 minutes
+**Load avg:** 7.23, 4.85, 2.57
 
 ## Running services (ours)
 
@@ -48,8 +48,8 @@ mesh-pilot-influencer-worker.service  [inactive]
 
 ```
 NAMES                      IMAGE                             STATUS       PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 2 weeks   127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 weeks   127.0.0.1:3120->3000/tcp
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 2 hours   127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 3 weeks   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -115,45 +115,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 62 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 61 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 48 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 47 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 56 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 55 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 67 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 66 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 55 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 54 days)
 ```
 
 ## Postgres databases
 
 ```
 exotic420budz_medusa  (18 MB)
-glitch_brain  (108 MB)
+glitch_brain  (119 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (199 MB)
+shopify_app  (203 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        48G   39G  8.5G  83% /
+/dev/root        77G   49G   29G  63% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       6.2Gi       5.0Gi       901Mi       5.3Gi       9.1Gi
-Swap:          4.0Gi       2.2Gi       1.8Gi
+Mem:            15Gi        10Gi       230Mi       665Mi       5.8Gi       5.0Gi
+Swap:          4.0Gi       2.6Gi       1.4Gi
 ```
 
 ## Project directories
@@ -176,6 +176,7 @@ Swap:          4.0Gi       2.2Gi       1.8Gi
 /home/ubuntu/hydrogen-d2c-starter              git: (no remote)
 /home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
+/home/ubuntu/sourcing-agency-site              git: git@github.com:Nuraveda-Labs/sourcing-agency-site.git
 /srv/apps/cannabis-web-next                    git: git@github.com:glitch-exec-labs/glitch-budz.git
 
 ```
