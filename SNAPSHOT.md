@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-01 03:47:01 UTC
-**Uptime:** up 3 weeks, 17 hours, 24 minutes
-**Load avg:** 7.23, 4.85, 2.57
+**Generated:** 2026-07-02 03:47:01 UTC
+**Uptime:** up 3 weeks, 1 day, 17 hours, 24 minutes
+**Load avg:** 1.35, 0.68, 0.58
 
 ## Running services (ours)
 
@@ -32,6 +32,8 @@ Hand-maintained notes live in [README.md](README.md).
 
 ```
 glitch-amazon-sp-sqp-sync.service  [inactive]
+mesh-pilot-crm-discovery.service  [failed]
+mesh-pilot-crm-sheet-sync.service  [inactive]
 mesh-pilot-docs-autosync.service  [failed]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
@@ -41,15 +43,16 @@ mesh-pilot-influencer-worker.service  [inactive]
 ## Failed services
 
 ```
+● mesh-pilot-crm-discovery.service loaded failed failed Mesh Pilot — CRM lead pipeline (Places discovery + website enrichment + social search) for Glitch Budz
 ● mesh-pilot-docs-autosync.service loaded failed failed Mesh Pilot — keep docs/ aligned with commit history (daily catch-up)
 ```
 
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS       PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 2 hours   127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 3 weeks   127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS             PORTS
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up About an hour   127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 3 weeks         127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -115,51 +118,52 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 61 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 60 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 47 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 46 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 55 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 54 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 66 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 65 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 54 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 53 days)
 ```
 
 ## Postgres databases
 
 ```
 exotic420budz_medusa  (18 MB)
-glitch_brain  (119 MB)
+glitch_brain  (123 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (203 MB)
+shopify_app  (207 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   49G   29G  63% /
+/dev/root        77G   62G   15G  81% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        10Gi       230Mi       665Mi       5.8Gi       5.0Gi
-Swap:          4.0Gi       2.6Gi       1.4Gi
+Mem:            15Gi        10Gi       316Mi       507Mi       5.7Gi       5.2Gi
+Swap:          4.0Gi       2.7Gi       1.3Gi
 ```
 
 ## Project directories
 
 ```
 /home/ubuntu/.cache                            (not a git repo)
+/home/ubuntu/.camoufox                         (not a git repo)
 /home/ubuntu/.claude                           (not a git repo)
 /home/ubuntu/.config                           (not a git repo)
 /home/ubuntu/.docker                           (not a git repo)
@@ -176,6 +180,7 @@ Swap:          4.0Gi       2.6Gi       1.4Gi
 /home/ubuntu/hydrogen-d2c-starter              git: (no remote)
 /home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
+/home/ubuntu/scraper-venv                      (not a git repo)
 /home/ubuntu/sourcing-agency-site              git: git@github.com:Nuraveda-Labs/sourcing-agency-site.git
 /srv/apps/cannabis-web-next                    git: git@github.com:glitch-exec-labs/glitch-budz.git
 

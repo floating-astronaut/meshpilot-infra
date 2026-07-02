@@ -1,0 +1,19 @@
+[Unit]
+Description=Mesh Pilot — CRM lead pipeline (Places discovery + website enrichment + social search) for Glitch Budz
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+# Yield CPU/IO/memory to the cockpit — this heavy run (camoufox + scraping)
+# shares the production box, so keep it low-priority.
+Nice=15
+CPUWeight=20
+IOWeight=20
+MemoryMax=2G
+# 1) Places discovery + website enrichment + HubSpot sync (app venv, py3.14)
+ExecStart=/bin/bash -lc 'cd /home/ubuntu/glitch-grow-ads-agent-private && set -a && . ./.env 2>/dev/null && . ./.env.grow-dashboard 2>/dev/null && set +a && PYTHONPATH=src/sales_agent/src exec .venv/bin/python scripts/crm_lead_pipeline.py --brand glitch-budz --hubspot'
+# 2) stealth social search for no-website leads (scraper venv, py3.12 + camoufox)
+ExecStart=/bin/bash -lc 'cd /home/ubuntu/glitch-grow-ads-agent-private && set -a && . ./.env.grow-dashboard 2>/dev/null && set +a && export BRAIN_DSN=$(.venv/bin/python -c "from meshpilot_dashboard.config import settings; print(settings.postgres_brain_url)") && exec /home/ubuntu/scraper-venv/bin/python scripts/social_search.py --brand glitch-budz --limit 100'
+TimeoutStartSec=2400

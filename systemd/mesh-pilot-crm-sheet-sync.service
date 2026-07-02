@@ -1,0 +1,14 @@
+[Unit]
+Description=Mesh Pilot CRM <-> Google Sheet two-way sync (IFW)
+After=network-online.target postgresql.service
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/glitch-grow-ads-agent-private
+ExecStart=/usr/bin/bash -lc 'set -a; source .env 2>/dev/null; source .env.grow-dashboard 2>/dev/null; set +a; exec .venv/bin/python scripts/crm_sheet_sync.py'
+TimeoutStartSec=600
+Nice=10
+CPUWeight=30
+IOWeight=30
+MemoryMax=1G
