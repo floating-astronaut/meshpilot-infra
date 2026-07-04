@@ -37,6 +37,36 @@ server {
 
     # Only /media/fetch is allowed. Upstream FastAPI verifies the signed
     # HMAC token; nginx only enforces rate + path scope.
+    # Twilio ConversationRelay WS — hosted here on a NON-Cloudflare (grey)
+    # hostname because Twilio's resolver cached the CF IP of the old
+    # shopify.meshpilot.app relay path (2026-07-03 demo debugging). Fresh
+    # hostname = fresh DNS = Twilio reaches the origin. -> relay :3105.
+    # cod-pipecat: Pipecat + Vobiz voice bot for COD confirmation. Hosted on
+    # this grey-clouded host so Vobiz's WebSocket client reaches the origin
+    # directly (same lesson as /relay/). Prefix stripped -> service sees
+    # /health, /vobiz/answer, /vobiz/ws, /start.
+    location /cod-pipecat/ {
+        proxy_pass http://127.0.0.1:3106/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+    }
+
+    location /relay/ {
+        proxy_pass http://127.0.0.1:3105;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+    }
+
     location = /media/fetch {
         # limit_req zone=media_fetch  # zone def was in deleted media.glitchexecutor.com vhost # burst=20 nodelay;
 
