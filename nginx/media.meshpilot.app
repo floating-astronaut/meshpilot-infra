@@ -79,6 +79,15 @@ server {
         proxy_read_timeout 300s;
     }
 
+    # Marketing reference assets (AI influencer pipeline): read-only statics
+    # served as stable URLs for generation refs (MuAPI images_list) and
+    # HeyGen B-roll. Files land in /var/www/meshpilot-media/. Added 2026-07-05.
+    location /assets/ {
+        alias /var/www/meshpilot-media/;
+        autoindex off;
+        add_header Cache-Control "public, max-age=86400";
+    }
+
     # Everything else — close the connection without a response.
     location / {
         return 444;

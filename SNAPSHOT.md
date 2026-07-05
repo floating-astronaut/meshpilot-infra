@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-04 03:47:01 UTC
-**Uptime:** up 3 weeks, 3 days, 17 hours, 24 minutes
-**Load avg:** 0.26, 0.25, 0.66
+**Generated:** 2026-07-05 03:47:01 UTC
+**Uptime:** up 3 weeks, 4 days, 17 hours, 24 minutes
+**Load avg:** 1.35, 2.96, 2.79
 
 ## Running services (ours)
 
@@ -34,7 +34,7 @@ Hand-maintained notes live in [README.md](README.md).
 glitch-amazon-sp-sqp-sync.service  [inactive]
 mesh-pilot-crm-discovery.service  [failed]
 mesh-pilot-crm-sheet-sync.service  [inactive]
-mesh-pilot-docs-autosync.service  [inactive]
+mesh-pilot-docs-autosync.service  [failed]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
@@ -43,16 +43,16 @@ mesh-pilot-influencer-worker.service  [inactive]
 ## Failed services
 
 ```
-● certbot.service                  loaded failed failed Certbot
 ● mesh-pilot-crm-discovery.service loaded failed failed Mesh Pilot — CRM lead pipeline (Places discovery + website enrichment + social search) for Glitch Budz
+● mesh-pilot-docs-autosync.service loaded failed failed Mesh Pilot — keep docs/ aligned with commit history (daily catch-up)
 ```
 
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS        PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 20 hours   127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 3 weeks    127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS       PORTS
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 6 hours   127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 3 weeks   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -119,45 +119,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 58 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 57 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 44 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 43 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 52 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 51 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 63 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 62 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 51 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 50 days)
 ```
 
 ## Postgres databases
 
 ```
 exotic420budz_medusa  (18 MB)
-glitch_brain  (140 MB)
+glitch_brain  (205 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (215 MB)
+shopify_app  (219 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   67G  9.7G  88% /
+/dev/root        77G   66G   11G  87% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       6.4Gi       6.0Gi       393Mi       3.7Gi       9.0Gi
-Swap:          4.0Gi       3.5Gi       560Mi
+Mem:            15Gi        13Gi       501Mi       1.1Gi       3.0Gi       2.0Gi
+Swap:          4.0Gi       4.0Gi        40Ki
 ```
 
 ## Project directories
@@ -169,19 +169,23 @@ Swap:          4.0Gi       3.5Gi       560Mi
 /home/ubuntu/.cloudflare                       (not a git repo)
 /home/ubuntu/.config                           (not a git repo)
 /home/ubuntu/.docker                           (not a git repo)
+/home/ubuntu/.heygen                           (not a git repo)
 /home/ubuntu/.kimi                             (not a git repo)
 /home/ubuntu/.kimi-code                        (not a git repo)
 /home/ubuntu/.lazyweb                          (not a git repo)
 /home/ubuntu/.local                            (not a git repo)
 /home/ubuntu/.npm                              (not a git repo)
 /home/ubuntu/.ssh                              (not a git repo)
+/home/ubuntu/.wrangler                         (not a git repo)
 /home/ubuntu/admin                             (not a git repo)
 /home/ubuntu/ai-empire-blueprint               git: git@github.com:Nuraveda-Labs/ai-empire-blueprint.git
 /home/ubuntu/backups                           (not a git repo)
 /home/ubuntu/cosmic-template                   git: git@github.com:bundui/cosmic.git
 /home/ubuntu/glitch-brain-mcp                  git: git@github.com:floating-astronaut/glitch-brain-mcp.git
 /home/ubuntu/glitch-grow-ads-agent-private     git: git@github.com:Nuraveda-Labs/meshpilot-digital-marketing-stack.git
+/home/ubuntu/heygen-skills                     git: git@github.com:heygen-com/skills
 /home/ubuntu/hydrogen-d2c-starter              git: (no remote)
+/home/ubuntu/jordan-hale-locked-set            (not a git repo)
 /home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
 /home/ubuntu/nltk_data                         (not a git repo)
@@ -190,6 +194,7 @@ Swap:          4.0Gi       3.5Gi       560Mi
 /home/ubuntu/sourcing-agency-site              git: git@github.com:Nuraveda-Labs/sourcing-agency-site.git
 /home/ubuntu/taurus-ai-corp-website            git: git@github.com:Taurus-Ai-Corp/taurus-ai-corp-website.git
 /home/ubuntu/taurus-content                    (not a git repo)
+/home/ubuntu/vendor-cosmic                     git: git@github.com:bundui/cosmic.git
 /home/ubuntu/waitly-template                   git: git@github.com:bundui/waitly.git
 /srv/apps/cannabis-web-next                    git: git@github.com:glitch-exec-labs/glitch-budz.git
 
