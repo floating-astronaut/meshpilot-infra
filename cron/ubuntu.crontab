@@ -10,3 +10,5 @@
 0 3 * * * /home/ubuntu/backups/backup-postgres.sh
 47 3 * * * cd /home/ubuntu/meshpilot-infra && bash sync.sh >> /home/ubuntu/meshpilot-infra/sync.log 2>&1
 */2 * * * * /home/ubuntu/ge-trade-watch.sh >> /home/ubuntu/.ge-trade-watch.cron.log 2>&1
+17 * * * * curl -s -X POST -H "X-Drip-Secret: $(cat /home/ubuntu/.buildaiempire_drip_secret)" https://buildaiempire.com/api/drip >> /home/ubuntu/logs/buildaiempire-drip.log 2>&1 # buildaiempire_drip
+0 4 * * 0 cd /home/ubuntu/glitch-grow-ads-agent-private && /usr/bin/python3 scripts/refresh_meta_token.py >> /home/ubuntu/.local/state/glitch-ads-bot/logs/meta-token-refresh.log 2>&1

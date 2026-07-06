@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-05 03:47:01 UTC
-**Uptime:** up 3 weeks, 4 days, 17 hours, 24 minutes
-**Load avg:** 1.35, 2.96, 2.79
+**Generated:** 2026-07-06 03:47:01 UTC
+**Uptime:** up 3 weeks, 5 days, 17 hours, 24 minutes
+**Load avg:** 1.22, 1.21, 1.07
 
 ## Running services (ours)
 
@@ -50,9 +50,9 @@ mesh-pilot-influencer-worker.service  [inactive]
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS       PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 6 hours   127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 3 weeks   127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS        PORTS
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 30 hours   127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 3 weeks    127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -119,45 +119,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 57 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 56 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 43 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 42 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 51 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 50 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 62 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 61 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 50 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 49 days)
 ```
 
 ## Postgres databases
 
 ```
 exotic420budz_medusa  (18 MB)
-glitch_brain  (205 MB)
+glitch_brain  (214 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (219 MB)
+shopify_app  (223 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   66G   11G  87% /
+/dev/root        77G   68G  9.2G  89% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        13Gi       501Mi       1.1Gi       3.0Gi       2.0Gi
-Swap:          4.0Gi       4.0Gi        40Ki
+Mem:            15Gi        11Gi       978Mi       1.2Gi       4.7Gi       4.1Gi
+Swap:          4.0Gi       1.5Gi       2.5Gi
 ```
 
 ## Project directories
@@ -183,9 +183,11 @@ Swap:          4.0Gi       4.0Gi        40Ki
 /home/ubuntu/cosmic-template                   git: git@github.com:bundui/cosmic.git
 /home/ubuntu/glitch-brain-mcp                  git: git@github.com:floating-astronaut/glitch-brain-mcp.git
 /home/ubuntu/glitch-grow-ads-agent-private     git: git@github.com:Nuraveda-Labs/meshpilot-digital-marketing-stack.git
+/home/ubuntu/google-cloud-sdk                  (not a git repo)
 /home/ubuntu/heygen-skills                     git: git@github.com:heygen-com/skills
 /home/ubuntu/hydrogen-d2c-starter              git: (no remote)
 /home/ubuntu/jordan-hale-locked-set            (not a git repo)
+/home/ubuntu/logs                              (not a git repo)
 /home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
 /home/ubuntu/nltk_data                         (not a git repo)
@@ -195,6 +197,7 @@ Swap:          4.0Gi       4.0Gi        40Ki
 /home/ubuntu/taurus-ai-corp-website            git: git@github.com:Taurus-Ai-Corp/taurus-ai-corp-website.git
 /home/ubuntu/taurus-content                    (not a git repo)
 /home/ubuntu/vendor-cosmic                     git: git@github.com:bundui/cosmic.git
+/home/ubuntu/venvs                             (not a git repo)
 /home/ubuntu/waitly-template                   git: git@github.com:bundui/waitly.git
 /srv/apps/cannabis-web-next                    git: git@github.com:glitch-exec-labs/glitch-budz.git
 
@@ -215,4 +218,6 @@ Swap:          4.0Gi       4.0Gi        40Ki
 0 3 * * * /home/ubuntu/backups/backup-postgres.sh
 47 3 * * * cd /home/ubuntu/meshpilot-infra && bash sync.sh >> /home/ubuntu/meshpilot-infra/sync.log 2>&1
 */2 * * * * /home/ubuntu/ge-trade-watch.sh >> /home/ubuntu/.ge-trade-watch.cron.log 2>&1
+17 * * * * curl -s -X POST -H "X-Drip-Secret: $(cat /home/ubuntu/.buildaiempire_drip_secret)" https://buildaiempire.com/api/drip >> /home/ubuntu/logs/buildaiempire-drip.log 2>&1 # buildaiempire_drip
+0 4 * * 0 cd /home/ubuntu/glitch-grow-ads-agent-private && /usr/bin/python3 scripts/refresh_meta_token.py >> /home/ubuntu/.local/state/glitch-ads-bot/logs/meta-token-refresh.log 2>&1
 ```
