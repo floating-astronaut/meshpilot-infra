@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-07 03:47:01 UTC
-**Uptime:** up 3 weeks, 6 days, 17 hours, 24 minutes
-**Load avg:** 1.00, 1.05, 1.11
+**Generated:** 2026-07-08 03:47:01 UTC
+**Uptime:** up 4 weeks, 17 hours, 24 minutes
+**Load avg:** 4.89, 2.23, 1.50
 
 ## Running services (ours)
 
@@ -50,8 +50,8 @@ mesh-pilot-influencer-worker.service  [inactive]
 
 ```
 NAMES                      IMAGE                             STATUS       PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 2 days    127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 3 weeks   127.0.0.1:3120->3000/tcp
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 3 days    127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -118,45 +118,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 55 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 54 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 41 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 40 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 49 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 48 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 60 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 59 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 48 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 47 days)
 ```
 
 ## Postgres databases
 
 ```
 exotic420budz_medusa  (18 MB)
-glitch_brain  (216 MB)
+glitch_brain  (217 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (226 MB)
+shopify_app  (230 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   68G  9.1G  89% /
+/dev/root        77G   64G   13G  84% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        11Gi       175Mi       825Mi       4.9Gi       3.9Gi
-Swap:          4.0Gi       2.9Gi       1.1Gi
+Mem:            15Gi        11Gi       948Mi       846Mi       3.8Gi       3.5Gi
+Swap:          4.0Gi       4.0Gi        88Ki
 ```
 
 ## Project directories
@@ -173,11 +173,13 @@ Swap:          4.0Gi       2.9Gi       1.1Gi
 /home/ubuntu/.kimi-code                        (not a git repo)
 /home/ubuntu/.lazyweb                          (not a git repo)
 /home/ubuntu/.local                            (not a git repo)
+/home/ubuntu/.muapi                            (not a git repo)
 /home/ubuntu/.npm                              (not a git repo)
 /home/ubuntu/.ssh                              (not a git repo)
 /home/ubuntu/.wrangler                         (not a git repo)
 /home/ubuntu/admin                             (not a git repo)
 /home/ubuntu/ai-empire-blueprint               git: git@github.com:Nuraveda-Labs/ai-empire-blueprint.git
+/home/ubuntu/ai-empire-content                 (not a git repo)
 /home/ubuntu/backups                           (not a git repo)
 /home/ubuntu/cosmic-template                   git: git@github.com:bundui/cosmic.git
 /home/ubuntu/glitch-brain-mcp                  git: git@github.com:floating-astronaut/glitch-brain-mcp.git
