@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-08 03:47:01 UTC
-**Uptime:** up 4 weeks, 17 hours, 24 minutes
-**Load avg:** 4.89, 2.23, 1.50
+**Generated:** 2026-07-09 03:47:01 UTC
+**Uptime:** up 4 weeks, 1 day, 17 hours, 24 minutes
+**Load avg:** 0.36, 0.71, 0.75
 
 ## Running services (ours)
 
@@ -34,7 +34,7 @@ Hand-maintained notes live in [README.md](README.md).
 glitch-amazon-sp-sqp-sync.service  [inactive]
 mesh-pilot-crm-discovery.service  [failed]
 mesh-pilot-crm-sheet-sync.service  [inactive]
-mesh-pilot-docs-autosync.service  [inactive]
+mesh-pilot-docs-autosync.service  [failed]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
@@ -44,14 +44,15 @@ mesh-pilot-influencer-worker.service  [inactive]
 
 ```
 ● mesh-pilot-crm-discovery.service loaded failed failed Mesh Pilot — CRM lead pipeline (Places discovery + website enrichment + social search) for Glitch Budz
+● mesh-pilot-docs-autosync.service loaded failed failed Mesh Pilot — keep docs/ aligned with commit history (daily catch-up)
 ```
 
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS       PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 3 days    127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks   127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS              PORTS
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up About a minute   127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks          127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -118,19 +119,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 54 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 53 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 40 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 39 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 48 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 47 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 59 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 58 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 47 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 46 days)
 ```
 
 ## Postgres databases
@@ -141,22 +142,22 @@ glitch_brain  (217 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (230 MB)
+shopify_app  (234 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   64G   13G  84% /
+/dev/root        77G   49G   29G  64% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        11Gi       948Mi       846Mi       3.8Gi       3.5Gi
-Swap:          4.0Gi       4.0Gi        88Ki
+Mem:            15Gi       6.9Gi       1.1Gi       539Mi       8.1Gi       8.4Gi
+Swap:          4.0Gi       2.2Gi       1.8Gi
 ```
 
 ## Project directories
@@ -179,7 +180,7 @@ Swap:          4.0Gi       4.0Gi        88Ki
 /home/ubuntu/.wrangler                         (not a git repo)
 /home/ubuntu/admin                             (not a git repo)
 /home/ubuntu/ai-empire-blueprint               git: git@github.com:Nuraveda-Labs/ai-empire-blueprint.git
-/home/ubuntu/ai-empire-content                 (not a git repo)
+/home/ubuntu/ai-empire-content                 git: (no remote)
 /home/ubuntu/backups                           (not a git repo)
 /home/ubuntu/cosmic-template                   git: git@github.com:bundui/cosmic.git
 /home/ubuntu/glitch-brain-mcp                  git: git@github.com:floating-astronaut/glitch-brain-mcp.git
