@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-09 03:47:01 UTC
-**Uptime:** up 4 weeks, 1 day, 17 hours, 24 minutes
-**Load avg:** 0.36, 0.71, 0.75
+**Generated:** 2026-07-10 03:47:01 UTC
+**Uptime:** up 4 weeks, 2 days, 17 hours, 24 minutes
+**Load avg:** 1.06, 1.15, 1.41
 
 ## Running services (ours)
 
@@ -50,14 +50,15 @@ mesh-pilot-influencer-worker.service  [inactive]
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS              PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up About a minute   127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks          127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS        PORTS
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 22 hours   127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks    127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
 
 ```
+*:3000                       (v1
 *:3130                       proc=node
 0.0.0.0:22                   proc=sshd
 0.0.0.0:25                   proc=master
@@ -119,45 +120,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 53 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 52 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 39 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 38 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 47 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 46 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 58 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 57 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 46 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 45 days)
 ```
 
 ## Postgres databases
 
 ```
 exotic420budz_medusa  (18 MB)
-glitch_brain  (217 MB)
+glitch_brain  (218 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (234 MB)
+shopify_app  (237 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   49G   29G  64% /
+/dev/root        77G   50G   27G  65% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       6.9Gi       1.1Gi       539Mi       8.1Gi       8.4Gi
-Swap:          4.0Gi       2.2Gi       1.8Gi
+Mem:            15Gi        13Gi       195Mi       1.0Gi       3.5Gi       2.3Gi
+Swap:          4.0Gi       3.9Gi        60Mi
 ```
 
 ## Project directories
@@ -176,16 +177,19 @@ Swap:          4.0Gi       2.2Gi       1.8Gi
 /home/ubuntu/.local                            (not a git repo)
 /home/ubuntu/.muapi                            (not a git repo)
 /home/ubuntu/.npm                              (not a git repo)
+/home/ubuntu/.scrape-venv                      (not a git repo)
 /home/ubuntu/.ssh                              (not a git repo)
 /home/ubuntu/.wrangler                         (not a git repo)
+/home/ubuntu/ad-batch-v2                       (not a git repo)
 /home/ubuntu/admin                             (not a git repo)
 /home/ubuntu/ai-empire-blueprint               git: git@github.com:Nuraveda-Labs/ai-empire-blueprint.git
-/home/ubuntu/ai-empire-content                 git: (no remote)
 /home/ubuntu/backups                           (not a git repo)
+/home/ubuntu/comp-scrape                       (not a git repo)
 /home/ubuntu/cosmic-template                   git: git@github.com:bundui/cosmic.git
 /home/ubuntu/glitch-brain-mcp                  git: git@github.com:floating-astronaut/glitch-brain-mcp.git
 /home/ubuntu/glitch-grow-ads-agent-private     git: git@github.com:Nuraveda-Labs/meshpilot-digital-marketing-stack.git
 /home/ubuntu/google-cloud-sdk                  (not a git repo)
+/home/ubuntu/hero-banners                      (not a git repo)
 /home/ubuntu/heygen-skills                     git: git@github.com:heygen-com/skills
 /home/ubuntu/hydrogen-d2c-starter              git: (no remote)
 /home/ubuntu/jordan-hale-locked-set            (not a git repo)
@@ -193,6 +197,9 @@ Swap:          4.0Gi       2.2Gi       1.8Gi
 /home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
 /home/ubuntu/nltk_data                         (not a git repo)
+/home/ubuntu/p1-new-content                    (not a git repo)
+/home/ubuntu/p1-stage                          (not a git repo)
+/home/ubuntu/preview-shots                     (not a git repo)
 /home/ubuntu/scraper-venv                      (not a git repo)
 /home/ubuntu/shadcn-ui-kit-dashboard           git: git@github.com:bundui/shadcn-ui-kit-dashboard.git
 /home/ubuntu/sourcing-agency-site              git: git@github.com:Nuraveda-Labs/sourcing-agency-site.git
