@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-11 03:47:01 UTC
-**Uptime:** up 4 weeks, 3 days, 17 hours, 24 minutes
-**Load avg:** 0.16, 0.79, 1.06
+**Generated:** 2026-07-12 03:47:01 UTC
+**Uptime:** up 4 weeks, 4 days, 17 hours, 24 minutes
+**Load avg:** 4.86, 4.96, 3.12
 
 ## Running services (ours)
 
@@ -51,7 +51,7 @@ mesh-pilot-influencer-worker.service  [inactive]
 
 ```
 NAMES                      IMAGE                             STATUS          PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 21 minutes   127.0.0.1:3001->3000/tcp
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 10 minutes   127.0.0.1:3001->3000/tcp
 mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks      127.0.0.1:3120->3000/tcp
 ```
 
@@ -67,6 +67,7 @@ mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks      127
 127.0.0.1:20241              proc=cloudflared
 127.0.0.1:3001               proc=docker-proxy
 127.0.0.1:3002               (v1
+127.0.0.1:3009               (v1
 127.0.0.1:3030               proc=workerd
 127.0.0.1:3101               proc=node
 127.0.0.1:3104               proc=node
@@ -119,45 +120,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 51 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 50 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 37 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 36 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 45 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 44 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 56 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 55 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 44 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 43 days)
 ```
 
 ## Postgres databases
 
 ```
 exotic420budz_medusa  (18 MB)
-glitch_brain  (218 MB)
+glitch_brain  (219 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (240 MB)
+shopify_app  (244 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   51G   26G  67% /
+/dev/root        77G   52G   25G  68% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       7.3Gi       5.5Gi       1.2Gi       4.1Gi       8.0Gi
-Swap:          4.0Gi       3.5Gi       538Mi
+Mem:            15Gi        12Gi       719Mi       1.1Gi       3.7Gi       2.9Gi
+Swap:          4.0Gi       4.0Gi        29Mi
 ```
 
 ## Project directories
@@ -198,6 +199,7 @@ Swap:          4.0Gi       3.5Gi       538Mi
 /home/ubuntu/jordan-hale-locked-set            (not a git repo)
 /home/ubuntu/logs                              (not a git repo)
 /home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
+/home/ubuntu/mp-frontend                       (not a git repo)
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
 /home/ubuntu/nltk_data                         (not a git repo)
 /home/ubuntu/p1-new-content                    (not a git repo)
