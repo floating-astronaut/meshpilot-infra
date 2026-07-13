@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-12 03:47:01 UTC
-**Uptime:** up 4 weeks, 4 days, 17 hours, 24 minutes
-**Load avg:** 4.86, 4.96, 3.12
+**Generated:** 2026-07-13 03:47:01 UTC
+**Uptime:** up 4 weeks, 5 days, 17 hours, 24 minutes
+**Load avg:** 0.27, 0.34, 0.58
 
 ## Running services (ours)
 
@@ -34,7 +34,7 @@ Hand-maintained notes live in [README.md](README.md).
 glitch-amazon-sp-sqp-sync.service  [inactive]
 mesh-pilot-crm-discovery.service  [failed]
 mesh-pilot-crm-sheet-sync.service  [inactive]
-mesh-pilot-docs-autosync.service  [failed]
+mesh-pilot-docs-autosync.service  [inactive]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
@@ -44,15 +44,15 @@ mesh-pilot-influencer-worker.service  [inactive]
 
 ```
 ● mesh-pilot-crm-discovery.service loaded failed failed Mesh Pilot — CRM lead pipeline (Places discovery + website enrichment + social search) for Glitch Budz
-● mesh-pilot-docs-autosync.service loaded failed failed Mesh Pilot — keep docs/ aligned with commit history (daily catch-up)
+● mp-reclaim-static-videos.service loaded failed failed One-shot: reclaim static/social/videos after R2 cutover drain (T5c)
 ```
 
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS          PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 10 minutes   127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks      127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS        PORTS
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 24 hours   127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks    127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -78,6 +78,7 @@ mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks      127
 127.0.0.1:3110               proc=uvicorn
 127.0.0.1:3111               proc=uvicorn
 127.0.0.1:3113               proc=python
+127.0.0.1:3114               proc=python
 127.0.0.1:3120               proc=docker-proxy
 127.0.0.1:33667              proc=workerd
 127.0.0.1:4000               proc=python
@@ -120,19 +121,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 50 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 49 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 36 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 35 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 44 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 43 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 55 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 54 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 43 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 42 days)
 ```
 
 ## Postgres databases
@@ -143,22 +144,22 @@ glitch_brain  (219 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (244 MB)
+shopify_app  (247 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   52G   25G  68% /
+/dev/root        77G   53G   25G  69% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        12Gi       719Mi       1.1Gi       3.7Gi       2.9Gi
-Swap:          4.0Gi       4.0Gi        29Mi
+Mem:            15Gi       8.1Gi       4.9Gi       1.0Gi       3.7Gi       7.2Gi
+Swap:          4.0Gi       3.9Gi        73Mi
 ```
 
 ## Project directories
