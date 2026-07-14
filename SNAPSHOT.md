@@ -3,23 +3,19 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-13 03:47:01 UTC
-**Uptime:** up 4 weeks, 5 days, 17 hours, 24 minutes
-**Load avg:** 0.27, 0.34, 0.58
+**Generated:** 2026-07-14 03:47:01 UTC
+**Uptime:** up 4 weeks, 6 days, 17 hours, 24 minutes
+**Load avg:** 1.01, 1.03, 1.00
 
 ## Running services (ours)
 
 ```
-  cloudflared.service                            loaded active running Cloudflare Tunnel connector
   cod-confirm-relay.service                      loaded active running COD Confirm — Twilio ConversationRelay backend (international concierge LLM brain)
   cod-confirm.service                            loaded active running Mesh Pilot COD Confirm — voice AI COD confirmation service
-  exotic-420-budz-medusa.service                 loaded active running Exotic 420 Budz Medusa backend
-  exotic-420-budz.service                        loaded active running Exotic 420 Budz Next.js app
   glitch-ads-bot.service                         loaded active running Mesh Pilot Ads Agent — webhook receiver + Telegram bot
   glitch-brain-mcp.service                       loaded active running Glitch Brain MCP — central memory for Glitch Grow AI agents (streamable-HTTP on :3107)
   glitch-signal.service                          loaded active running Glitch Signal — monorepo social media agent
   grow-dashboard.service                         loaded active running Mesh Pilot Dashboard (FastAPI) — unified Meta ads view
-  hydrogen-demo.service                          loaded active running Hydrogen D2C Starter — public demo at hydrogen.nuraveda.com
   mesh-pilot-litellm-proxy.service               loaded active running Mesh Pilot - OpenAI-compatible Bedrock shim (port 4000) for the Retell voice bridge
   mesh-pilot-mcp.service                         loaded active running Mesh Pilot public MCP server (free-tier funnel) — MCP-FUNNEL-4
   mesh-pilot-shopify-embed.service               loaded active running Mesh Pilot — embedded Shopify app (Remix) self-hosted container
@@ -31,7 +27,11 @@ Hand-maintained notes live in [README.md](README.md).
 ## Inactive / stopped (ours)
 
 ```
+cloudflared.service  [inactive]
+exotic-420-budz-medusa.service  [inactive]
+exotic-420-budz.service  [inactive]
 glitch-amazon-sp-sqp-sync.service  [inactive]
+hydrogen-demo.service  [inactive]
 mesh-pilot-crm-discovery.service  [failed]
 mesh-pilot-crm-sheet-sync.service  [inactive]
 mesh-pilot-docs-autosync.service  [inactive]
@@ -51,24 +51,20 @@ mesh-pilot-influencer-worker.service  [inactive]
 
 ```
 NAMES                      IMAGE                             STATUS        PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 24 hours   127.0.0.1:3001->3000/tcp
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 22 hours   127.0.0.1:3001->3000/tcp
 mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks    127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
 
 ```
-*:3130                       proc=node
 0.0.0.0:22                   proc=sshd
 0.0.0.0:25                   proc=master
 0.0.0.0:443                  proc=nginx
 0.0.0.0:80                   proc=nginx
 127.0.0.1:19999              proc=netdata
-127.0.0.1:20241              proc=cloudflared
 127.0.0.1:3001               proc=docker-proxy
-127.0.0.1:3002               (v1
 127.0.0.1:3009               (v1
-127.0.0.1:3030               proc=workerd
 127.0.0.1:3101               proc=node
 127.0.0.1:3104               proc=node
 127.0.0.1:3105               proc=node
@@ -80,15 +76,11 @@ mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 4 weeks    127.0
 127.0.0.1:3113               proc=python
 127.0.0.1:3114               proc=python
 127.0.0.1:3120               proc=docker-proxy
-127.0.0.1:33667              proc=workerd
 127.0.0.1:4000               proc=python
-127.0.0.1:41887              proc=node
 127.0.0.1:4317               proc=otel-plugin
 127.0.0.1:5432               proc=postgres
-127.0.0.1:8080               proc=nginx
 127.0.0.1:8125               proc=netdata
 127.0.0.1:8910               proc=node
-127.0.0.1:9000               proc=node
 127.0.0.53%lo:53             proc=systemd-resolve
 127.0.0.54:53                proc=systemd-resolve
 172.17.0.1:5432              proc=postgres
@@ -106,8 +98,6 @@ apps.meshpilot.app
 auth.meshpilot.app
 brain.meshpilot.app
 default-deny
-exotic420budz.com
-hydrogen.nuraveda.com
 insights.meshpilot.app
 mcp.meshpilot.app
 media.meshpilot.app
@@ -121,45 +111,44 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 49 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 48 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 35 days)
+    Expiry Date: 2026-08-17 04:34:33+00:00 (VALID: 34 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 43 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 42 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 54 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 53 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 42 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 41 days)
 ```
 
 ## Postgres databases
 
 ```
-exotic420budz_medusa  (18 MB)
-glitch_brain  (219 MB)
+glitch_brain  (220 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 postgres  (7678 kB)
-shopify_app  (247 MB)
+shopify_app  (250 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   53G   25G  69% /
+/dev/root        77G   50G   28G  65% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       8.1Gi       4.9Gi       1.0Gi       3.7Gi       7.2Gi
-Swap:          4.0Gi       3.9Gi        73Mi
+Mem:            15Gi        11Gi       242Mi       1.0Gi       5.0Gi       3.9Gi
+Swap:          4.0Gi       4.0Gi       1.1Mi
 ```
 
 ## Project directories
@@ -169,8 +158,11 @@ Swap:          4.0Gi       3.9Gi        73Mi
 /home/ubuntu/.camoufox                         (not a git repo)
 /home/ubuntu/.claude                           (not a git repo)
 /home/ubuntu/.cloudflare                       (not a git repo)
+/home/ubuntu/.codegraph                        (not a git repo)
+/home/ubuntu/.codex                            (not a git repo)
 /home/ubuntu/.config                           (not a git repo)
 /home/ubuntu/.docker                           (not a git repo)
+/home/ubuntu/.gnupg                            (not a git repo)
 /home/ubuntu/.heygen                           (not a git repo)
 /home/ubuntu/.kimi                             (not a git repo)
 /home/ubuntu/.kimi-code                        (not a git repo)
@@ -186,16 +178,12 @@ Swap:          4.0Gi       3.9Gi        73Mi
 /home/ubuntu/ad-batch-story                    (not a git repo)
 /home/ubuntu/ad-batch-v2                       (not a git repo)
 /home/ubuntu/admin                             (not a git repo)
-/home/ubuntu/ai-empire-blueprint               git: git@github.com:Nuraveda-Labs/ai-empire-blueprint.git
 /home/ubuntu/backups                           (not a git repo)
-/home/ubuntu/comp-scrape                       (not a git repo)
-/home/ubuntu/cosmic-template                   git: git@github.com:bundui/cosmic.git
 /home/ubuntu/glitch-brain-mcp                  git: git@github.com:floating-astronaut/glitch-brain-mcp.git
 /home/ubuntu/glitch-grow-ads-agent-private     git: git@github.com:Nuraveda-Labs/meshpilot-digital-marketing-stack.git
 /home/ubuntu/google-cloud-sdk                  (not a git repo)
 /home/ubuntu/hero-banners                      (not a git repo)
 /home/ubuntu/heygen-skills                     git: git@github.com:heygen-com/skills
-/home/ubuntu/hydrogen-d2c-starter              git: (no remote)
 /home/ubuntu/india-persona                     (not a git repo)
 /home/ubuntu/jordan-hale-locked-set            (not a git repo)
 /home/ubuntu/logs                              (not a git repo)
@@ -207,15 +195,8 @@ Swap:          4.0Gi       3.9Gi        73Mi
 /home/ubuntu/p1-stage                          (not a git repo)
 /home/ubuntu/persona-india-candidates          (not a git repo)
 /home/ubuntu/preview-shots                     (not a git repo)
-/home/ubuntu/scraper-venv                      (not a git repo)
-/home/ubuntu/shadcn-ui-kit-dashboard           git: git@github.com:bundui/shadcn-ui-kit-dashboard.git
-/home/ubuntu/sourcing-agency-site              git: git@github.com:Nuraveda-Labs/sourcing-agency-site.git
-/home/ubuntu/taurus-ai-corp-website            git: git@github.com:Taurus-Ai-Corp/taurus-ai-corp-website.git
-/home/ubuntu/taurus-content                    (not a git repo)
-/home/ubuntu/vendor-cosmic                     git: git@github.com:bundui/cosmic.git
 /home/ubuntu/venvs                             (not a git repo)
-/home/ubuntu/waitly-template                   git: git@github.com:bundui/waitly.git
-/srv/apps/cannabis-web-next                    git: git@github.com:glitch-exec-labs/glitch-budz.git
+
 
 ```
 
