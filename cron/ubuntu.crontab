@@ -1,6 +1,6 @@
 */30 * * * * /home/ubuntu/glitch-grow-ads-agent-private/scripts/urban_watch.sh >> /home/ubuntu/.local/state/glitch-ads-bot/logs/urban-watch.log 2>&1
 30 6 * * 0 /home/ubuntu/glitch-grow-ads-agent-private/scripts/reap-test-residue.sh >> /home/ubuntu/.local/state/glitch-grow/test-reaper.log 2>&1
-35 4 * * * cd /home/ubuntu/glitch-grow-ads-agent-private/apps/cod_confirm && set -a && . /home/ubuntu/glitch-grow-ads-agent-private/.env && set +a && node scripts/sync-vobiz-recordings.mjs --days 2 >> /tmp/vobiz-sync.log 2>&1
+# DISABLED 2026-07-23 (vobiz 402 insufficient balance) 35 4 * * * cd /home/ubuntu/glitch-grow-ads-agent-private/apps/cod_confirm && set -a && . /home/ubuntu/glitch-grow-ads-agent-private/.env && set +a && node scripts/sync-vobiz-recordings.mjs --days 2 >> /tmp/vobiz-sync.log 2>&1
 35 5 * * * cd /home/ubuntu/glitch-grow-ads-agent-private && .venv/bin/python scripts/sync_twilio_recordings.py --days 2 >> /tmp/twilio-sync.log 2>&1
 */2 * * * * /home/ubuntu/meshpilot-watch.sh
 15 */2 * * * cd /home/ubuntu/glitch-grow-ads-agent-private && .venv/bin/dotenv -f .env.grow-dashboard run -- .venv/bin/dotenv -f .env run -- .venv/bin/python scripts/plan_aware_watch.py >> /home/ubuntu/.local/state/glitch-ads-bot/logs/plan-aware-watch.log 2>&1

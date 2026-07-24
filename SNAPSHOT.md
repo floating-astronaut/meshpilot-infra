@@ -3,14 +3,13 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-23 03:47:01 UTC
-**Uptime:** up 6 weeks, 1 day, 17 hours, 24 minutes
-**Load avg:** 0.15, 1.92, 1.93
+**Generated:** 2026-07-24 03:47:01 UTC
+**Uptime:** up 6 weeks, 2 days, 17 hours, 24 minutes
+**Load avg:** 1.69, 1.50, 1.34
 
 ## Running services (ours)
 
 ```
-  cod-confirm-relay.service                      loaded active running COD Confirm — Twilio ConversationRelay backend (international concierge LLM brain)
   cod-confirm.service                            loaded active running Mesh Pilot COD Confirm — voice AI COD confirmation service
   glitch-ads-bot.service                         loaded active running Mesh Pilot Ads Agent — webhook receiver + Telegram bot
   glitch-brain-mcp.service                       loaded active running Glitch Brain MCP — central memory for Glitch Grow AI agents (streamable-HTTP on :3107)
@@ -28,6 +27,7 @@ Hand-maintained notes live in [README.md](README.md).
 
 ```
 cloudflared.service  [inactive]
+cod-confirm-relay.service  [inactive]
 exotic-420-budz-medusa.service  [inactive]
 exotic-420-budz.service  [inactive]
 glitch-amazon-sp-sqp-sync.service  [inactive]
@@ -49,14 +49,15 @@ mesh-pilot-influencer-worker.service  [inactive]
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS        PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 27 hours   127.0.0.1:3001->3000/tcp
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 6 weeks    127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS       PORTS
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 2 days    127.0.0.1:3001->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 6 weeks   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
 
 ```
+*:3000                       (v1
 0.0.0.0:22                   proc=sshd
 0.0.0.0:25                   proc=master
 0.0.0.0:443                  proc=nginx
@@ -66,8 +67,6 @@ mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 6 weeks    127.0
 127.0.0.1:3009               (v1
 127.0.0.1:3101               proc=node
 127.0.0.1:3104               proc=node
-127.0.0.1:3105               proc=node
-127.0.0.1:3106               proc=uvicorn
 127.0.0.1:3107               proc=glitch-brain-mc
 127.0.0.1:3108               proc=python
 127.0.0.1:3110               proc=uvicorn
@@ -110,49 +109,51 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 39 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 38 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 85 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 84 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 33 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 32 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 44 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 43 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 32 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 31 days)
 ```
 
 ## Postgres databases
 
 ```
-glitch_brain  (223 MB)
+glitch_brain  (224 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
+meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (282 MB)
+shopify_app  (285 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   58G   20G  75% /
+/dev/root        77G   58G   19G  76% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       7.1Gi       5.9Gi       1.2Gi       4.0Gi       8.3Gi
-Swap:          4.0Gi       4.0Gi       2.5Mi
+Mem:            15Gi        10Gi       716Mi       1.2Gi       5.8Gi       4.9Gi
+Swap:          4.0Gi       3.4Gi       601Mi
 ```
 
 ## Project directories
 
 ```
+/home/ubuntu/.aws                              (not a git repo)
 /home/ubuntu/.cache                            (not a git repo)
 /home/ubuntu/.camoufox                         (not a git repo)
 /home/ubuntu/.claude                           (not a git repo)
@@ -187,6 +188,7 @@ Swap:          4.0Gi       4.0Gi       2.5Mi
 /home/ubuntu/jordan-hale-locked-set            (not a git repo)
 /home/ubuntu/logs                              (not a git repo)
 /home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
+/home/ubuntu/meshpilot-v2                      git: git@github.com:Nuraveda-Labs/meshpilot-v2.git
 /home/ubuntu/mp-frontend                       (not a git repo)
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
 /home/ubuntu/nltk_data                         (not a git repo)
@@ -204,7 +206,7 @@ Swap:          4.0Gi       4.0Gi       2.5Mi
 ```
 */30 * * * * /home/ubuntu/glitch-grow-ads-agent-private/scripts/urban_watch.sh >> /home/ubuntu/.local/state/glitch-ads-bot/logs/urban-watch.log 2>&1
 30 6 * * 0 /home/ubuntu/glitch-grow-ads-agent-private/scripts/reap-test-residue.sh >> /home/ubuntu/.local/state/glitch-grow/test-reaper.log 2>&1
-35 4 * * * cd /home/ubuntu/glitch-grow-ads-agent-private/apps/cod_confirm && set -a && . /home/ubuntu/glitch-grow-ads-agent-private/.env && set +a && node scripts/sync-vobiz-recordings.mjs --days 2 >> /tmp/vobiz-sync.log 2>&1
+# DISABLED 2026-07-23 (vobiz 402 insufficient balance) 35 4 * * * cd /home/ubuntu/glitch-grow-ads-agent-private/apps/cod_confirm && set -a && . /home/ubuntu/glitch-grow-ads-agent-private/.env && set +a && node scripts/sync-vobiz-recordings.mjs --days 2 >> /tmp/vobiz-sync.log 2>&1
 35 5 * * * cd /home/ubuntu/glitch-grow-ads-agent-private && .venv/bin/python scripts/sync_twilio_recordings.py --days 2 >> /tmp/twilio-sync.log 2>&1
 */2 * * * * /home/ubuntu/meshpilot-watch.sh
 15 */2 * * * cd /home/ubuntu/glitch-grow-ads-agent-private && .venv/bin/dotenv -f .env.grow-dashboard run -- .venv/bin/dotenv -f .env run -- .venv/bin/python scripts/plan_aware_watch.py >> /home/ubuntu/.local/state/glitch-ads-bot/logs/plan-aware-watch.log 2>&1
