@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-24 03:47:01 UTC
-**Uptime:** up 6 weeks, 2 days, 17 hours, 24 minutes
-**Load avg:** 1.69, 1.50, 1.34
+**Generated:** 2026-07-25 03:47:01 UTC
+**Uptime:** up 6 weeks, 3 days, 17 hours, 24 minutes
+**Load avg:** 0.17, 0.20, 0.62
 
 ## Running services (ours)
 
@@ -50,7 +50,7 @@ mesh-pilot-influencer-worker.service  [inactive]
 
 ```
 NAMES                      IMAGE                             STATUS       PORTS
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 2 days    127.0.0.1:3001->3000/tcp
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 3 days    127.0.0.1:3001->3000/tcp
 mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 6 weeks   127.0.0.1:3120->3000/tcp
 ```
 
@@ -109,19 +109,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 38 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 37 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 84 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 83 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 32 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 31 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 43 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 42 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 31 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 30 days)
 ```
 
 ## Postgres databases
@@ -132,22 +132,22 @@ glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (285 MB)
+shopify_app  (289 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   58G   19G  76% /
+/dev/root        77G   61G   16G  80% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        10Gi       716Mi       1.2Gi       5.8Gi       4.9Gi
-Swap:          4.0Gi       3.4Gi       601Mi
+Mem:            15Gi       6.0Gi       5.4Gi       1.1Gi       5.3Gi       9.4Gi
+Swap:          4.0Gi       3.9Gi        68Mi
 ```
 
 ## Project directories
@@ -190,6 +190,7 @@ Swap:          4.0Gi       3.4Gi       601Mi
 /home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
 /home/ubuntu/meshpilot-v2                      git: git@github.com:Nuraveda-Labs/meshpilot-v2.git
 /home/ubuntu/mp-frontend                       (not a git repo)
+/home/ubuntu/mp-v2                             (not a git repo)
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
 /home/ubuntu/nltk_data                         (not a git repo)
 /home/ubuntu/p1-new-content                    (not a git repo)
