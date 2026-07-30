@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-29 03:47:01 UTC
-**Uptime:** up 7 weeks, 17 hours, 24 minutes
-**Load avg:** 1.66, 1.69, 1.88
+**Generated:** 2026-07-30 03:47:01 UTC
+**Uptime:** up 7 weeks, 1 day, 17 hours, 24 minutes
+**Load avg:** 4.32, 3.57, 2.12
 
 ## Running services (ours)
 
@@ -17,6 +17,7 @@ Hand-maintained notes live in [README.md](README.md).
   grow-dashboard.service                         loaded active running Mesh Pilot Dashboard (FastAPI) — unified Meta ads view
   mesh-pilot-litellm-proxy.service               loaded active running Mesh Pilot - OpenAI-compatible Bedrock shim (port 4000) for the Retell voice bridge
   mesh-pilot-mcp.service                         loaded active running Mesh Pilot public MCP server (free-tier funnel) — MCP-FUNNEL-4
+  mesh-pilot-shopify-embed.service               loaded active running Mesh Pilot — embedded Shopify app (Remix) self-hosted container
   mesh-pilot-web-next.service                    loaded active running Mesh Pilot frontend — apps/web-next (Next.js 16) behind nginx
   retell-vercel-bridge.service                   loaded active running Retell ↔ Vercel AI Gateway WebSocket bridge
   shopify-app.service                            loaded active running Multi-Store Theme Manager (Shopify App)
@@ -32,11 +33,10 @@ exotic-420-budz.service  [inactive]
 glitch-amazon-sp-sqp-sync.service  [inactive]
 hydrogen-demo.service  [inactive]
 mesh-pilot-crm-discovery.service  [failed]
-mesh-pilot-crm-sheet-sync.service  [activating]
+mesh-pilot-crm-sheet-sync.service  [inactive]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
-mesh-pilot-shopify-embed.service  [activating]
 ```
 
 ## Failed services
@@ -50,8 +50,9 @@ mesh-pilot-shopify-embed.service  [activating]
 ## Docker containers
 
 ```
-NAMES                 IMAGE                        STATUS        PORTS
-mesh-pilot-web-next   mesh-pilot-web-next:latest   Up 21 hours   127.0.0.1:3001->3000/tcp
+NAMES                      IMAGE                             STATUS         PORTS
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 seconds   127.0.0.1:3120->3000/tcp
+mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 45 hours    127.0.0.1:3001->3000/tcp
 ```
 
 ## Listening ports
@@ -62,6 +63,7 @@ mesh-pilot-web-next   mesh-pilot-web-next:latest   Up 21 hours   127.0.0.1:3001-
 0.0.0.0:25                   proc=master
 0.0.0.0:443                  proc=nginx
 0.0.0.0:80                   proc=nginx
+127.0.0.1:16459              proc=code-1b6a188127
 127.0.0.1:19999              proc=netdata
 127.0.0.1:3001               proc=docker-proxy
 127.0.0.1:3009               (v1
@@ -73,6 +75,7 @@ mesh-pilot-web-next   mesh-pilot-web-next:latest   Up 21 hours   127.0.0.1:3001-
 127.0.0.1:3111               proc=uvicorn
 127.0.0.1:3113               proc=python
 127.0.0.1:3114               proc=python
+127.0.0.1:3120               proc=docker-proxy
 127.0.0.1:4000               proc=python
 127.0.0.1:4317               proc=otel-plugin
 127.0.0.1:5432               proc=postgres
@@ -108,19 +111,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 33 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 32 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 79 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 78 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 27 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 26 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 38 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 37 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 26 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 25 days)
 ```
 
 ## Postgres databases
@@ -131,22 +134,22 @@ glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (300 MB)
+shopify_app  (302 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   65G   12G  85% /
+/dev/root        77G   45G   33G  58% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        11Gi       581Mi       1.5Gi       4.8Gi       3.5Gi
-Swap:          4.0Gi       4.0Gi        12Ki
+Mem:            15Gi       6.7Gi       4.9Gi       1.8Gi       5.9Gi       8.6Gi
+Swap:          4.0Gi       3.7Gi       336Mi
 ```
 
 ## Project directories
@@ -160,9 +163,11 @@ Swap:          4.0Gi       4.0Gi        12Ki
 /home/ubuntu/.codegraph                        (not a git repo)
 /home/ubuntu/.codex                            (not a git repo)
 /home/ubuntu/.config                           (not a git repo)
+/home/ubuntu/.copilot                          (not a git repo)
 /home/ubuntu/.cursor                           (not a git repo)
 /home/ubuntu/.cursor-server                    (not a git repo)
 /home/ubuntu/.docker                           (not a git repo)
+/home/ubuntu/.dotnet                           (not a git repo)
 /home/ubuntu/.gnupg                            (not a git repo)
 /home/ubuntu/.heygen                           (not a git repo)
 /home/ubuntu/.kimi                             (not a git repo)
@@ -173,6 +178,7 @@ Swap:          4.0Gi       4.0Gi        12Ki
 /home/ubuntu/.npm                              (not a git repo)
 /home/ubuntu/.scrape-venv                      (not a git repo)
 /home/ubuntu/.ssh                              (not a git repo)
+/home/ubuntu/.vscode-server                    (not a git repo)
 /home/ubuntu/.wrangler                         (not a git repo)
 /home/ubuntu/Generative-Media-Skills           git: git@github.com:SamurAIGPT/Generative-Media-Skills.git
 /home/ubuntu/ad-batch-square                   (not a git repo)
