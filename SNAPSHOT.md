@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-30 03:47:01 UTC
-**Uptime:** up 7 weeks, 1 day, 17 hours, 24 minutes
-**Load avg:** 4.32, 3.57, 2.12
+**Generated:** 2026-07-31 03:47:01 UTC
+**Uptime:** up 7 weeks, 2 days, 17 hours, 24 minutes
+**Load avg:** 1.73, 1.80, 2.08
 
 ## Running services (ours)
 
@@ -17,7 +17,6 @@ Hand-maintained notes live in [README.md](README.md).
   grow-dashboard.service                         loaded active running Mesh Pilot Dashboard (FastAPI) — unified Meta ads view
   mesh-pilot-litellm-proxy.service               loaded active running Mesh Pilot - OpenAI-compatible Bedrock shim (port 4000) for the Retell voice bridge
   mesh-pilot-mcp.service                         loaded active running Mesh Pilot public MCP server (free-tier funnel) — MCP-FUNNEL-4
-  mesh-pilot-shopify-embed.service               loaded active running Mesh Pilot — embedded Shopify app (Remix) self-hosted container
   mesh-pilot-web-next.service                    loaded active running Mesh Pilot frontend — apps/web-next (Next.js 16) behind nginx
   retell-vercel-bridge.service                   loaded active running Retell ↔ Vercel AI Gateway WebSocket bridge
   shopify-app.service                            loaded active running Multi-Store Theme Manager (Shopify App)
@@ -37,6 +36,7 @@ mesh-pilot-crm-sheet-sync.service  [inactive]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
+mesh-pilot-shopify-embed.service  [activating]
 ```
 
 ## Failed services
@@ -50,9 +50,8 @@ mesh-pilot-influencer-worker.service  [inactive]
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS         PORTS
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 seconds   127.0.0.1:3120->3000/tcp
-mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 45 hours    127.0.0.1:3001->3000/tcp
+NAMES                 IMAGE                        STATUS      PORTS
+mesh-pilot-web-next   mesh-pilot-web-next:latest   Up 2 days   127.0.0.1:3001->3000/tcp
 ```
 
 ## Listening ports
@@ -75,7 +74,6 @@ mesh-pilot-web-next        mesh-pilot-web-next:latest        Up 45 hours    127.
 127.0.0.1:3111               proc=uvicorn
 127.0.0.1:3113               proc=python
 127.0.0.1:3114               proc=python
-127.0.0.1:3120               proc=docker-proxy
 127.0.0.1:4000               proc=python
 127.0.0.1:4317               proc=otel-plugin
 127.0.0.1:5432               proc=postgres
@@ -111,45 +109,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 32 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 31 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 78 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 77 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 26 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 25 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 37 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 36 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 25 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 24 days)
 ```
 
 ## Postgres databases
 
 ```
-glitch_brain  (225 MB)
+glitch_brain  (226 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (302 MB)
+shopify_app  (304 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   45G   33G  58% /
+/dev/root        77G   44G   33G  58% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       6.7Gi       4.9Gi       1.8Gi       5.9Gi       8.6Gi
-Swap:          4.0Gi       3.7Gi       336Mi
+Mem:            15Gi        10Gi       710Mi       1.8Gi       6.0Gi       4.5Gi
+Swap:          4.0Gi       3.6Gi       412Mi
 ```
 
 ## Project directories
