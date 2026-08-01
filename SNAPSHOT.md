@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-07-31 03:47:01 UTC
-**Uptime:** up 7 weeks, 2 days, 17 hours, 24 minutes
-**Load avg:** 1.73, 1.80, 2.08
+**Generated:** 2026-08-01 03:47:01 UTC
+**Uptime:** up 7 weeks, 3 days, 17 hours, 24 minutes
+**Load avg:** 1.05, 0.68, 0.77
 
 ## Running services (ours)
 
@@ -17,7 +17,7 @@ Hand-maintained notes live in [README.md](README.md).
   grow-dashboard.service                         loaded active running Mesh Pilot Dashboard (FastAPI) — unified Meta ads view
   mesh-pilot-litellm-proxy.service               loaded active running Mesh Pilot - OpenAI-compatible Bedrock shim (port 4000) for the Retell voice bridge
   mesh-pilot-mcp.service                         loaded active running Mesh Pilot public MCP server (free-tier funnel) — MCP-FUNNEL-4
-  mesh-pilot-web-next.service                    loaded active running Mesh Pilot frontend — apps/web-next (Next.js 16) behind nginx
+  mesh-pilot-shopify-embed.service               loaded active running Mesh Pilot — embedded Shopify app (Remix) self-hosted container
   retell-vercel-bridge.service                   loaded active running Retell ↔ Vercel AI Gateway WebSocket bridge
   shopify-app.service                            loaded active running Multi-Store Theme Manager (Shopify App)
 ```
@@ -36,7 +36,7 @@ mesh-pilot-crm-sheet-sync.service  [inactive]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
-mesh-pilot-shopify-embed.service  [activating]
+mesh-pilot-web-next.service  [inactive]
 ```
 
 ## Failed services
@@ -50,21 +50,19 @@ mesh-pilot-shopify-embed.service  [activating]
 ## Docker containers
 
 ```
-NAMES                 IMAGE                        STATUS      PORTS
-mesh-pilot-web-next   mesh-pilot-web-next:latest   Up 2 days   127.0.0.1:3001->3000/tcp
+NAMES                      IMAGE                             STATUS                  PORTS
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up Less than a second   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
 
 ```
-*:3000                       (v1
 0.0.0.0:22                   proc=sshd
 0.0.0.0:25                   proc=master
 0.0.0.0:443                  proc=nginx
 0.0.0.0:80                   proc=nginx
 127.0.0.1:16459              proc=code-1b6a188127
 127.0.0.1:19999              proc=netdata
-127.0.0.1:3001               proc=docker-proxy
 127.0.0.1:3009               (v1
 127.0.0.1:3101               proc=node
 127.0.0.1:3104               proc=node
@@ -74,6 +72,7 @@ mesh-pilot-web-next   mesh-pilot-web-next:latest   Up 2 days   127.0.0.1:3001->3
 127.0.0.1:3111               proc=uvicorn
 127.0.0.1:3113               proc=python
 127.0.0.1:3114               proc=python
+127.0.0.1:3120               proc=docker-proxy
 127.0.0.1:4000               proc=python
 127.0.0.1:4317               proc=otel-plugin
 127.0.0.1:5432               proc=postgres
@@ -109,19 +108,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 31 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 30 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 77 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 76 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 25 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 24 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 36 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 35 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 24 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 23 days)
 ```
 
 ## Postgres databases
@@ -132,22 +131,22 @@ glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (304 MB)
+shopify_app  (308 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   44G   33G  58% /
+/dev/root        77G   45G   32G  59% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi        10Gi       710Mi       1.8Gi       6.0Gi       4.5Gi
-Swap:          4.0Gi       3.6Gi       412Mi
+Mem:            15Gi       5.9Gi       5.1Gi       1.4Gi       6.1Gi       9.5Gi
+Swap:          4.0Gi       3.9Gi       145Mi
 ```
 
 ## Project directories
@@ -193,10 +192,8 @@ Swap:          4.0Gi       3.6Gi       412Mi
 /home/ubuntu/jordan-hale-locked-set            (not a git repo)
 /home/ubuntu/logs                              (not a git repo)
 /home/ubuntu/meshpilot-infra                   git: git@github.com:Nuraveda-Labs/meshpilot-infra.git
-/home/ubuntu/meshpilot-v2                      git: git@github.com:Nuraveda-Labs/meshpilot-v2.git
 /home/ubuntu/monad-gate-explainer              (not a git repo)
 /home/ubuntu/mp-frontend                       (not a git repo)
-/home/ubuntu/mp-v2                             (not a git repo)
 /home/ubuntu/multi-store-theme-manager         git: git@github.com:floating-astronaut/multi-store-theme-manager.git
 /home/ubuntu/nltk_data                         (not a git repo)
 /home/ubuntu/p1-new-content                    (not a git repo)
@@ -204,6 +201,7 @@ Swap:          4.0Gi       3.6Gi       412Mi
 /home/ubuntu/persona-india-candidates          (not a git repo)
 /home/ubuntu/preview-shots                     (not a git repo)
 /home/ubuntu/venvs                             (not a git repo)
+/home/ubuntu/worktrees                         (not a git repo)
 
 
 ```
