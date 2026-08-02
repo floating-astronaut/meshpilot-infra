@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-08-01 03:47:01 UTC
-**Uptime:** up 7 weeks, 3 days, 17 hours, 24 minutes
-**Load avg:** 1.05, 0.68, 0.77
+**Generated:** 2026-08-02 03:47:01 UTC
+**Uptime:** up 7 weeks, 4 days, 17 hours, 24 minutes
+**Load avg:** 1.12, 0.80, 0.92
 
 ## Running services (ours)
 
@@ -50,8 +50,8 @@ mesh-pilot-web-next.service  [inactive]
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS                  PORTS
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up Less than a second   127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS         PORTS
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 7 seconds   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -108,19 +108,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 30 days)
+    Expiry Date: 2026-09-01 02:56:00+00:00 (VALID: 29 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 76 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 75 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 24 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 23 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 35 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 34 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 23 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 22 days)
 ```
 
 ## Postgres databases
@@ -131,7 +131,7 @@ glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (308 MB)
+shopify_app  (311 MB)
 ```
 
 ## Disk
@@ -145,8 +145,8 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       5.9Gi       5.1Gi       1.4Gi       6.1Gi       9.5Gi
-Swap:          4.0Gi       3.9Gi       145Mi
+Mem:            15Gi       6.2Gi       5.1Gi       1.7Gi       6.0Gi       9.1Gi
+Swap:          4.0Gi       3.9Gi        61Mi
 ```
 
 ## Project directories
