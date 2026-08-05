@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-08-04 03:47:01 UTC
-**Uptime:** up 7 weeks, 6 days, 17 hours, 24 minutes
-**Load avg:** 1.37, 0.82, 0.92
+**Generated:** 2026-08-05 03:47:01 UTC
+**Uptime:** up 8 weeks, 17 hours, 24 minutes
+**Load avg:** 1.73, 1.70, 1.71
 
 ## Running services (ours)
 
@@ -17,7 +17,6 @@ Hand-maintained notes live in [README.md](README.md).
   grow-dashboard.service                         loaded active running Mesh Pilot Dashboard (FastAPI) — unified Meta ads view
   mesh-pilot-litellm-proxy.service               loaded active running Mesh Pilot - OpenAI-compatible Bedrock shim (port 4000) for the Retell voice bridge
   mesh-pilot-mcp.service                         loaded active running Mesh Pilot public MCP server (free-tier funnel) — MCP-FUNNEL-4
-  mesh-pilot-shopify-embed.service               loaded active running Mesh Pilot — embedded Shopify app (Remix) self-hosted container
   retell-vercel-bridge.service                   loaded active running Retell ↔ Vercel AI Gateway WebSocket bridge
   shopify-app.service                            loaded active running Multi-Store Theme Manager (Shopify App)
 ```
@@ -36,6 +35,7 @@ mesh-pilot-crm-sheet-sync.service  [inactive]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
+mesh-pilot-shopify-embed.service  [activating]
 mesh-pilot-web-next.service  [inactive]
 ```
 
@@ -50,8 +50,7 @@ mesh-pilot-web-next.service  [inactive]
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS         PORTS
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 7 seconds   127.0.0.1:3120->3000/tcp
+NAMES     IMAGE     STATUS    PORTS
 ```
 
 ## Listening ports
@@ -72,7 +71,6 @@ mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 7 seconds   127.
 127.0.0.1:3111               proc=uvicorn
 127.0.0.1:3113               proc=python
 127.0.0.1:3114               proc=python
-127.0.0.1:3120               proc=docker-proxy
 127.0.0.1:4000               proc=python
 127.0.0.1:4317               proc=otel-plugin
 127.0.0.1:5432               proc=postgres
@@ -108,19 +106,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 87 days)
+    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 86 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 73 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 72 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 21 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 20 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 32 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 31 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 20 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 19 days)
 ```
 
 ## Postgres databases
@@ -131,7 +129,7 @@ glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (315 MB)
+shopify_app  (317 MB)
 ```
 
 ## Disk
@@ -145,8 +143,8 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       9.2Gi       413Mi       1.6Gi       7.7Gi       6.1Gi
-Swap:          4.0Gi       3.9Gi        64Mi
+Mem:            15Gi        11Gi       397Mi       1.8Gi       5.8Gi       4.0Gi
+Swap:          4.0Gi       4.0Gi       4.5Mi
 ```
 
 ## Project directories
