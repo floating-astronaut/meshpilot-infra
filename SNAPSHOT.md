@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-08-06 03:47:01 UTC
-**Uptime:** up 8 weeks, 1 day, 17 hours, 24 minutes
-**Load avg:** 3.04, 1.22, 0.83
+**Generated:** 2026-08-07 03:47:01 UTC
+**Uptime:** up 19 hours, 10 minutes
+**Load avg:** 5.46, 5.93, 3.88
 
 ## Running services (ours)
 
@@ -31,7 +31,7 @@ exotic-420-budz-medusa.service  [inactive]
 exotic-420-budz.service  [inactive]
 glitch-amazon-sp-sqp-sync.service  [inactive]
 hydrogen-demo.service  [inactive]
-mesh-pilot-crm-discovery.service  [failed]
+mesh-pilot-crm-discovery.service  [inactive]
 mesh-pilot-crm-sheet-sync.service  [inactive]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
@@ -42,16 +42,14 @@ mesh-pilot-web-next.service  [inactive]
 ## Failed services
 
 ```
-● certbot.service                  loaded failed failed Certbot
-● mesh-pilot-crm-discovery.service loaded failed failed Mesh Pilot — CRM lead pipeline (Places discovery + website enrichment + social search) for Glitch Budz
-● mp-reclaim-static-videos.service loaded failed failed One-shot: reclaim static/social/videos after R2 cutover drain (T5c)
+● certbot.service loaded failed failed Certbot
 ```
 
 ## Docker containers
 
 ```
-NAMES                      IMAGE                             STATUS        PORTS
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 1 second   127.0.0.1:3120->3000/tcp
+NAMES                      IMAGE                             STATUS         PORTS
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 6 seconds   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -61,9 +59,7 @@ mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 1 second   127.0
 0.0.0.0:25                   proc=master
 0.0.0.0:443                  proc=nginx
 0.0.0.0:80                   proc=nginx
-127.0.0.1:16459              proc=code-1b6a188127
 127.0.0.1:19999              proc=netdata
-127.0.0.1:3009               (v1
 127.0.0.1:3101               proc=node
 127.0.0.1:3104               proc=node
 127.0.0.1:3107               proc=glitch-brain-mc
@@ -71,7 +67,6 @@ mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 1 second   127.0
 127.0.0.1:3110               proc=uvicorn
 127.0.0.1:3111               proc=uvicorn
 127.0.0.1:3113               proc=python
-127.0.0.1:3114               proc=python
 127.0.0.1:3120               proc=docker-proxy
 127.0.0.1:4000               proc=python
 127.0.0.1:4317               proc=otel-plugin
@@ -80,7 +75,6 @@ mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 1 second   127.0
 127.0.0.1:8910               proc=node
 127.0.0.53%lo:53             proc=systemd-resolve
 127.0.0.54:53                proc=systemd-resolve
-172.17.0.1:5432              proc=postgres
 [::]:22                      proc=sshd
 [::]:25                      proc=master
 [::]:443                     proc=nginx
@@ -108,19 +102,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 85 days)
+    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 84 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 71 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 70 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 19 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 18 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 30 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 29 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 18 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 17 days)
 ```
 
 ## Postgres databases
@@ -131,22 +125,22 @@ glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (319 MB)
+shopify_app  (322 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   47G   30G  62% /
+/dev/root        77G   48G   30G  62% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       6.4Gi       4.5Gi       1.8Gi       6.7Gi       9.0Gi
-Swap:          4.0Gi       4.0Gi        23Mi
+Mem:            15Gi       3.1Gi       4.3Gi       152Mi       8.5Gi        12Gi
+Swap:          4.0Gi        48Ki       4.0Gi
 ```
 
 ## Project directories
