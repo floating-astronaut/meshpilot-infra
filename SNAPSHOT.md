@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-08-07 03:47:01 UTC
-**Uptime:** up 19 hours, 10 minutes
-**Load avg:** 5.46, 5.93, 3.88
+**Generated:** 2026-08-08 03:47:01 UTC
+**Uptime:** up 1 day, 19 hours, 10 minutes
+**Load avg:** 0.51, 0.82, 1.82
 
 ## Running services (ours)
 
@@ -49,7 +49,7 @@ mesh-pilot-web-next.service  [inactive]
 
 ```
 NAMES                      IMAGE                             STATUS         PORTS
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 6 seconds   127.0.0.1:3120->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 seconds   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -102,45 +102,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 84 days)
+    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 83 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 70 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 69 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 18 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 17 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 29 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 28 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 17 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 16 days)
 ```
 
 ## Postgres databases
 
 ```
-glitch_brain  (227 MB)
+glitch_brain  (228 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (322 MB)
+shopify_app  (324 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   48G   30G  62% /
+/dev/root        77G   48G   29G  63% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       3.1Gi       4.3Gi       152Mi       8.5Gi        12Gi
-Swap:          4.0Gi        48Ki       4.0Gi
+Mem:            15Gi       3.2Gi       5.0Gi       150Mi       7.6Gi        12Gi
+Swap:          4.0Gi       652Mi       3.4Gi
 ```
 
 ## Project directories
@@ -177,6 +177,7 @@ Swap:          4.0Gi        48Ki       4.0Gi
 /home/ubuntu/ad-batch-v2                       (not a git repo)
 /home/ubuntu/admin                             (not a git repo)
 /home/ubuntu/backups                           (not a git repo)
+/home/ubuntu/echo                              git: git@github.com:Nuraveda-Labs/echo.git
 /home/ubuntu/glitch-brain-mcp                  git: git@github.com:floating-astronaut/glitch-brain-mcp.git
 /home/ubuntu/glitch-grow-ads-agent-private     git: git@github.com:Nuraveda-Labs/meshpilot-digital-marketing-stack.git
 /home/ubuntu/google-cloud-sdk                  (not a git repo)
