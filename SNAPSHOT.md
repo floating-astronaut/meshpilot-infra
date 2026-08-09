@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-08-08 03:47:01 UTC
-**Uptime:** up 1 day, 19 hours, 10 minutes
-**Load avg:** 0.51, 0.82, 1.82
+**Generated:** 2026-08-09 03:47:01 UTC
+**Uptime:** up 2 days, 19 hours, 10 minutes
+**Load avg:** 0.58, 0.64, 1.26
 
 ## Running services (ours)
 
@@ -49,7 +49,7 @@ mesh-pilot-web-next.service  [inactive]
 
 ```
 NAMES                      IMAGE                             STATUS         PORTS
-mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 2 seconds   127.0.0.1:3120->3000/tcp
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 5 seconds   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -102,19 +102,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 83 days)
+    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 82 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 69 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 68 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 17 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 16 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 28 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 27 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 16 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 15 days)
 ```
 
 ## Postgres databases
@@ -125,7 +125,7 @@ glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (324 MB)
+shopify_app  (327 MB)
 ```
 
 ## Disk
@@ -139,8 +139,8 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       3.2Gi       5.0Gi       150Mi       7.6Gi        12Gi
-Swap:          4.0Gi       652Mi       3.4Gi
+Mem:            15Gi       3.1Gi       5.2Gi       154Mi       7.5Gi        12Gi
+Swap:          4.0Gi       731Mi       3.3Gi
 ```
 
 ## Project directories
