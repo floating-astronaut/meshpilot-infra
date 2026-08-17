@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-08-16 03:47:01 UTC
-**Uptime:** up 1 day, 19 hours, 31 minutes
-**Load avg:** 2.40, 2.91, 3.50
+**Generated:** 2026-08-17 03:47:01 UTC
+**Uptime:** up 2 days, 19 hours, 31 minutes
+**Load avg:** 1.20, 1.08, 1.36
 
 ## Running services (ours)
 
@@ -100,45 +100,45 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 75 days)
+    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 74 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 61 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 60 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 9 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 8 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 20 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 19 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 8 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 7 days)
 ```
 
 ## Postgres databases
 
 ```
-glitch_brain  (230 MB)
+glitch_brain  (231 MB)
 glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (343 MB)
+shopify_app  (345 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   49G   28G  65% /
+/dev/root        77G   50G   27G  65% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       6.9Gi       659Mi       149Mi       8.2Gi       8.3Gi
-Swap:          4.0Gi       808Mi       3.2Gi
+Mem:            15Gi       2.9Gi       5.2Gi       149Mi       7.6Gi        12Gi
+Swap:          4.0Gi       820Mi       3.2Gi
 ```
 
 ## Project directories
