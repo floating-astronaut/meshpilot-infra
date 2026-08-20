@@ -3,9 +3,9 @@
 **Auto-generated — do not edit.** Regenerated daily by `snapshot.sh` (committed by `sync.sh`).
 Hand-maintained notes live in [README.md](README.md).
 
-**Generated:** 2026-08-19 03:47:01 UTC
-**Uptime:** up 1 day, 6 hours, 47 minutes
-**Load avg:** 7.26, 6.95, 6.04
+**Generated:** 2026-08-20 03:47:01 UTC
+**Uptime:** up 2 days, 6 hours, 47 minutes
+**Load avg:** 2.70, 3.39, 3.93
 
 ## Running services (ours)
 
@@ -17,6 +17,7 @@ Hand-maintained notes live in [README.md](README.md).
   grow-dashboard.service                         loaded active running Mesh Pilot Dashboard (FastAPI) — unified Meta ads view
   mesh-pilot-litellm-proxy.service               loaded active running Mesh Pilot - OpenAI-compatible Bedrock shim (port 4000) for the Retell voice bridge
   mesh-pilot-mcp.service                         loaded active running Mesh Pilot public MCP server (free-tier funnel) — MCP-FUNNEL-4
+  mesh-pilot-shopify-embed.service               loaded active running Mesh Pilot — embedded Shopify app (Remix) self-hosted container
   retell-vercel-bridge.service                   loaded active running Retell ↔ Vercel AI Gateway WebSocket bridge
   shopify-app.service                            loaded active running Multi-Store Theme Manager (Shopify App)
 ```
@@ -35,7 +36,6 @@ mesh-pilot-crm-sheet-sync.service  [inactive]
 mesh-pilot-influencer-discovery.service  [inactive]
 mesh-pilot-influencer-engage.service  [inactive]
 mesh-pilot-influencer-worker.service  [inactive]
-mesh-pilot-shopify-embed.service  [activating]
 mesh-pilot-web-next.service  [inactive]
 ```
 
@@ -48,7 +48,8 @@ mesh-pilot-web-next.service  [inactive]
 ## Docker containers
 
 ```
-NAMES     IMAGE     STATUS    PORTS
+NAMES                      IMAGE                             STATUS          PORTS
+mesh-pilot-shopify-embed   mesh-pilot-shopify-embed:latest   Up 11 seconds   127.0.0.1:3120->3000/tcp
 ```
 
 ## Listening ports
@@ -66,6 +67,7 @@ NAMES     IMAGE     STATUS    PORTS
 127.0.0.1:3110               proc=uvicorn
 127.0.0.1:3111               proc=uvicorn
 127.0.0.1:3113               proc=python
+127.0.0.1:3120               proc=docker-proxy
 127.0.0.1:4000               proc=python
 127.0.0.1:4317               proc=otel-plugin
 127.0.0.1:5432               proc=postgres
@@ -100,19 +102,19 @@ signal.meshpilot.app
 ```
   Certificate Name: apps.meshpilot.app
     Domains: apps.meshpilot.app
-    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 72 days)
+    Expiry Date: 2026-10-31 02:54:06+00:00 (VALID: 71 days)
   Certificate Name: auth.meshpilot.app
     Domains: auth.meshpilot.app
-    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 58 days)
+    Expiry Date: 2026-10-16 08:54:20+00:00 (VALID: 57 days)
   Certificate Name: hydrogen.nuraveda.com
     Domains: hydrogen.nuraveda.com
-    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 6 days)
+    Expiry Date: 2026-08-26 00:32:07+00:00 (VALID: 5 days)
   Certificate Name: meshpilot.app-0001
     Domains: *.meshpilot.app
-    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 17 days)
+    Expiry Date: 2026-09-06 01:10:44+00:00 (VALID: 16 days)
   Certificate Name: meshpilot.app
     Domains: meshpilot.app www.meshpilot.app
-    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 5 days)
+    Expiry Date: 2026-08-24 17:15:42+00:00 (VALID: 4 days)
 ```
 
 ## Postgres databases
@@ -123,22 +125,22 @@ glitch_social_media_agent  (8454 kB)
 meshpilot_shopify_embed  (8358 kB)
 meshpilot_v2_dev  (8190 kB)
 postgres  (7678 kB)
-shopify_app  (349 MB)
+shopify_app  (351 MB)
 ```
 
 ## Disk
 
 ```
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        77G   50G   28G  65% /
+/dev/root        77G   50G   27G  65% /
 ```
 
 ## Memory
 
 ```
                total        used        free      shared  buff/cache   available
-Mem:           7.6Gi       3.2Gi       564Mi       137Mi       4.4Gi       4.5Gi
-Swap:          4.0Gi       3.9Gi        89Mi
+Mem:           7.6Gi       3.6Gi       598Mi       140Mi       3.9Gi       4.0Gi
+Swap:          4.0Gi       3.9Gi       143Mi
 ```
 
 ## Project directories
